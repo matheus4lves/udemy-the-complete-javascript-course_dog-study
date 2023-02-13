@@ -14,8 +14,10 @@ const checkDogs = (dogsJulia, dogsKate) => {
   });
 
   const dogsAgeAll = dogsOnlyJulia.concat(dogsKate);
-  console.log(dogsAgeAll);
+
+  dogsAgeAll.forEach((age, idx) => (age < 3 ? console.log(`Dog number ${idx + 1} is still a puppy 🐶`) : console.log(`Dog number ${idx + 1} is an adult, and is ${age} years old`)));
 };
 
 checkDogs(dataJulia[0], dataKate[0]);
+console.log("\n");
 checkDogs(dataJulia[1], dataKate[1]);
