@@ -8,10 +8,7 @@ const dataKate = [
 ];
 
 const checkDogs = (dogsJulia, dogsKate) => {
-  const dogsOnlyJulia = dogsJulia.filter((_, idx, arr) => {
-    const size = arr.length;
-    return idx > 0 && idx < size - 2;
-  });
+  const dogsOnlyJulia = dogsJulia.slice(1, -2);
 
   const dogsAgeAll = dogsOnlyJulia.concat(dogsKate);
 
