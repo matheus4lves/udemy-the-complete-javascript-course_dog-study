@@ -13,7 +13,8 @@ const checkDogs = (dogsJulia, dogsKate) => {
     return idx > 0 && idx < size - 2;
   });
 
-  console.log(dogsOnlyJulia);
+  const dogsAgeAll = dogsOnlyJulia.concat(dogsKate);
+  console.log(dogsAgeAll);
 };
 
 checkDogs(dataJulia[0], dataKate[0]);
