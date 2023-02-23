@@ -12,6 +12,13 @@ const dogsAges = [
   [16, 6, 10, 5, 6, 1, 4],
 ];
 
+const dogs = [
+  { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
+  { weight: 8, curFood: 200, owners: ["Matilda"] },
+  { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
+  { weight: 32, curFood: 340, owners: ["Michael"] },
+];
+
 const checkDogs = (dogsJulia, dogsKate) => {
   const dogsOnlyJulia = dogsJulia.slice(1, -2);
 
@@ -31,3 +38,7 @@ const calcAverageHumanAge = ages => {
 
 console.log(calcAverageHumanAge(dogsAges[0]));
 console.log(calcAverageHumanAge(dogsAges[1]));
+
+dogs.forEach(dog => {
+  dog.recommendedFood = dog.weight ** 0.75 * 28;
+});
