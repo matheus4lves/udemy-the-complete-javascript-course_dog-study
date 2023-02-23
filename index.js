@@ -42,3 +42,9 @@ console.log(calcAverageHumanAge(dogsAges[1]));
 dogs.forEach(dog => {
   dog.recommendedFood = dog.weight ** 0.75 * 28;
 });
+
+// 1. Find the obj that contains Sarah in the owners array
+const { curFood, recommendedFood } = dogs.find(dog => dog.owners.includes("Sarah"));
+// 2. compare curFood and recommendedFood
+// 3. console.log() the result
+console.log(curFood > recommendedFood ? "Sarah's dog is eating too much" : "Sarah's dog is eating too little");
