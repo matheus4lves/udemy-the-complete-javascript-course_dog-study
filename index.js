@@ -55,4 +55,6 @@ let ownersEatTooMuch = [];
 
 dogs.forEach(dog => (dog.curFood < dog.recommendedFood ? ownersEatTooLittle.push(...dog.owners) : ownersEatTooMuch.push(...dog.owners)));
 
-console.log(ownersEatTooLittle, ownersEatTooMuch);
+// Task 4: Log the arrays from the previous task
+console.log(`${ownersEatTooLittle.join(" and ")}'s dogs eat too little!`);
+console.log(`${ownersEatTooMuch.join(" and ")}'s dogs eat too much!`);
