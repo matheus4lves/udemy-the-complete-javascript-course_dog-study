@@ -39,12 +39,20 @@ const calcAverageHumanAge = ages => {
 console.log(calcAverageHumanAge(dogsAges[0]));
 console.log(calcAverageHumanAge(dogsAges[1]));
 
+// Coding challenge 4
+// Task 1: Calculate the recommended food.
 dogs.forEach(dog => {
   dog.recommendedFood = dog.weight ** 0.75 * 28;
 });
 
-// 1. Find the obj that contains Sarah in the owners array
+// Task 2: Find the obj that contains Sarah in the owners array.
 const { curFood, recommendedFood } = dogs.find(dog => dog.owners.includes("Sarah"));
-// 2. compare curFood and recommendedFood
-// 3. console.log() the result
 console.log(curFood > recommendedFood ? "Sarah's dog is eating too much" : "Sarah's dog is eating too little");
+
+// Task 3: Create two arrays of owners
+let ownersEatTooLittle = [];
+let ownersEatTooMuch = [];
+
+dogs.forEach(dog => (dog.curFood < dog.recommendedFood ? ownersEatTooLittle.push(...dog.owners) : ownersEatTooMuch.push(...dog.owners)));
+
+console.log(ownersEatTooLittle, ownersEatTooMuch);
