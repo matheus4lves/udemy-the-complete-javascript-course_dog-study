@@ -58,3 +58,6 @@ dogs.forEach(dog => (dog.curFood < dog.recommendedFood ? ownersEatTooLittle.push
 // Task 4: Log the arrays from the previous task
 console.log(`${ownersEatTooLittle.join(" and ")}'s dogs eat too little!`);
 console.log(`${ownersEatTooMuch.join(" and ")}'s dogs eat too much!`);
+
+// Task 5: Check if there's a dog who eats the correct amount of food
+console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
