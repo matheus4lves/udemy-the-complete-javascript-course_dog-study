@@ -61,3 +61,6 @@ console.log(`${ownersEatTooMuch.join(" and ")}'s dogs eat too much!`);
 
 // Task 5: Check if there's a dog who eats the correct amount of food
 console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
+
+// Task 6: Check if there's any dog eating an okay amount
+console.log(dogs.some(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1));
