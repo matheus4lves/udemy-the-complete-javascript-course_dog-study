@@ -68,3 +68,15 @@ console.log(dogs.some(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curF
 // Task 7: Create an array of dogs that are eating an okay amount
 const dogsEatingAnOkayAmount = dogs.filter(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1);
 console.log(dogsEatingAnOkayAmount);
+
+// Task 8: Create a sorted shallow copy of the dogs array
+dogsCopy = [...dogs];
+
+function compareNumbers(currentDog, nextDog) {
+  const a = currentDog.recommendedFood;
+  const b = nextDog.recommendedFood;
+  return a - b;
+}
+
+dogsCopy.sort(compareNumbers);
+console.log(dogsCopy);
