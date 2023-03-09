@@ -64,3 +64,7 @@ console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
 
 // Task 6: Check if there's any dog eating an okay amount
 console.log(dogs.some(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1));
+
+// Task 7: Create an array of dogs that are eating an okay amount
+const dogsEatingAnOkayAmount = dogs.filter(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1);
+console.log(dogsEatingAnOkayAmount);
