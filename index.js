@@ -62,11 +62,13 @@ console.log(`${ownersEatTooMuch.join(" and ")}'s dogs eat too much!`);
 // Task 5: Check if there's a dog who eats the correct amount of food
 console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
 
+const checkEatingOkay = dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1;
+
 // Task 6: Check if there's any dog eating an okay amount
-console.log(dogs.some(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1));
+console.log(dogs.some(checkEatingOkay));
 
 // Task 7: Create an array of dogs that are eating an okay amount
-const dogsEatingAnOkayAmount = dogs.filter(dog => dog.curFood > dog.recommendedFood * 0.9 && dog.curFood < dog.recommendedFood * 1.1);
+const dogsEatingAnOkayAmount = dogs.filter(checkEatingOkay);
 console.log(dogsEatingAnOkayAmount);
 
 // Task 8: Create a sorted shallow copy of the dogs array
@@ -79,4 +81,5 @@ function compareNumbers(currentDog, nextDog) {
 }
 
 dogsCopy.sort(compareNumbers);
+console.log(dogs);
 console.log(dogsCopy);
